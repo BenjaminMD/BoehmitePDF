@@ -1,0 +1,37 @@
+[DEFAULT]
+dataformat = QA
+#backgroundfile = ./emtycap.xyd
+bgscale = 0.5
+
+## Output file name, write to the standard output when "-".
+## This may contain @f, @h, @r, @e, @t, @b, @o tokens which expands as follows:
+##
+##   @f  dir1/dir2/filename.dat    input file path
+##   @h  dir1/dir2                 input file head directory or '.'
+##   @r  dir1/dir2/filename        input path with extension removed
+##   @e  dat                       input file extension without '.'
+##   @t  filename.dat              tail component of the input file
+##   @b  filename                  tail component with extension removed
+##   @o  gr                        output extension iq, sq, fq or gr
+##
+## An empty value works the same as "@b.@o", i.e., saves the data
+## in the current directory with a proper data type extension.
+#output = series1/foo@b-01.@o
+output = @b.@o
+outputtype = sq, fq, gr
+force = yes
+mode = xray
+composition = AlOOH
+
+rpoly = 1.13
+
+qmaxinst = 20.396
+qmin = 0.406
+qmax = 15.0
+
+rmin = 0.0
+rmax = 300.0
+rstep = 0.01
+
+plot = iq, sq, fq, gr
+

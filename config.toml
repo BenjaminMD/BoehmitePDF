@@ -5,8 +5,8 @@ qdamp = 8.11835597e-03
 [Measurement]
 keV = 22.14
 [R_val]
-rmin = 1
-rmax = 30
+rmin = 0
+rmax = 20
 rstep = 0.01
 [files]
 cifs = './cifs/'
@@ -34,9 +34,5 @@ fix = []
 
 [[param_order]]
 free = ["delta2", "adp"] 
-fix = []
-
-[[param_order]]
-free = ["all"] 
 fix = []
 
